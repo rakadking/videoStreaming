@@ -1,4 +1,4 @@
-# videoStreaming
+# Video Streaming
 This is simple application build in node to learn video streaming
 
 **To run this application.**
