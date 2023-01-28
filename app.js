@@ -8,6 +8,35 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'))
 })
 
+app.get('/vList', (req, res) => {
+    res.json({
+        "status": 200,
+        "message": "success",
+        "data": [
+            {
+                "vName": "Earth",
+                "src": "sampleVideo.mp4"
+            },
+            {
+                "vName": "Tropical Leaf in Sunlight",
+                "src": "Nature.mp4"
+            },
+            {
+                "vName": "Technology",
+                "src": "Tech.mp4"
+            },
+            {
+                "vName": "Nature",
+                "src": "Nature.mp4"
+            },
+            {
+                "vName": "Flower",
+                "src": "Flower.mp4"
+            }
+        ]
+    })
+})
+
 app.get('/video', (req, res) => {
     const range = req.headers.range;
     const videoPath = 'public/sampleVideo.mp4';
